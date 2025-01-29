@@ -10,9 +10,10 @@ import SignUp from "./Components/Register";
 import PrivacyPolicy from "./pages/Privacy";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import GetStarted from "./pages/GetStarted"; // Import the new page
+import GetStarted from "./pages/GetStarted";
 import Explore from "./pages/Explore";
 import Songs from "./pages/Songs";
+import Chatbot from "./pages/Chatbot"; // Import the Chatbot page
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "./Components/firebase";
@@ -72,6 +73,7 @@ function App() {
           />
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/get-started/recommendations" element={<SongReco />} />
+          <Route path="/chatbot" element={<Chatbot />} />
         </Routes>
         <ToastContainer />
       </div>

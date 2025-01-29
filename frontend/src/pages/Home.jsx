@@ -8,7 +8,7 @@ import "../Styles/Home.css";
 
 const Home = () => {
   const [user, setUser] = useState(null);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -21,7 +21,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      window.location.href = "/login";
+      navigate("/login");
     } catch (error) {
       console.error("Logout Error: ", error);
     }
@@ -53,11 +53,25 @@ const Home = () => {
           >
             Get Started
           </button>
-          <a href="/home/explore">
-            <button className="cta-button">Explore Music</button>
-          </a>
+          <button
+            className="cta-button"
+            onClick={() => navigate("/home/explore")}
+          >
+            Explore Music
+          </button>
         </div>
       </div>
+
+      <div className="chatbot-container">
+        <div className="chatbot-icon" onClick={() => navigate("/chatbot")}>
+          <img
+            src="../album_pics/chat.png"
+            alt="Chatbot Icon"
+            className="chatbot-icon-img"
+          />
+        </div>
+      </div>
+
       <Footer />
     </>
   );

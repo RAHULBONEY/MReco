@@ -6,7 +6,11 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src="/spotify.jpg" alt="mrec logo" className="logo-image" />
+          <img
+            src="../album_pics/weblog.jpg"
+            alt="mrec logo"
+            className="logo-image"
+          />
           <span className="site-name">MREC</span>
         </div>
         <nav className="nav-links">

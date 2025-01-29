@@ -22,7 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-album_pics
+
 package-lock.json
 vite.config.js
 node_modules

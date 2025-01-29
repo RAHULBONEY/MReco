@@ -13,7 +13,7 @@ const scopes = [
 export const loginEndpoint = `${authEndpoint}?client_id=${clientId}&redirect_uri=${encodeURIComponent(
   redirectUri
 )}&scope=${encodeURIComponent(
-  scopes.join("%20")
+  scopes.join(" ")
 )}&response_type=code&show_dialog=true`;
 
 const apiClient = axios.create({
