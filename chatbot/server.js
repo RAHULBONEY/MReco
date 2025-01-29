@@ -6,12 +6,12 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 
-// Enable CORS only for the frontend URL
+
 const corsOptions = {
   origin: "http://localhost:5174", // Frontend URL
-  methods: ["GET", "POST"], // Allowed HTTP methods
+  methods: ["GET", "POST"], 
 };
-app.use(cors(corsOptions)); // Enable CORS with options
+app.use(cors(corsOptions)); 
 
 const PORT = process.env.PORT || 11434;
 
@@ -36,7 +36,7 @@ app.post("/chatbot", async (req, res) => {
 
     // Send the bot response back to the frontend
     res.json({
-      botResponse: response.data.response, // Ensure this matches the structure returned from the Ollama API
+      botResponse: response.data.response, 
     });
   } catch (error) {
     console.error("Error handling chatbot request:", error);
@@ -44,7 +44,7 @@ app.post("/chatbot", async (req, res) => {
   }
 });
 
-// Start the server
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
