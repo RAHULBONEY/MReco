@@ -11,7 +11,11 @@ MReco is a full-stack music recommendation app that helps users discover songs b
 
 📺 **Demo video will be added here soon!**
 
-Uploading MRec - Google Chrome 2025-07-22 02-23-32 (1) (1) (1).mp4
+
+
+https://github.com/user-attachments/assets/c1f23b6b-80bf-451d-b94d-73772853c97e
+
+
 
 
 
